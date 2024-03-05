@@ -7,9 +7,7 @@
   border-top-right-radius: 5px;
 }
 .blc p {
-  position: relative;
-  left: 18px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   top: 33px;
 }
@@ -17,4 +15,7 @@
 .nd {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+}
+#loveSongs {
+  width: 20px;
 }
