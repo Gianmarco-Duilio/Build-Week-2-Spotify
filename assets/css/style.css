@@ -10,7 +10,10 @@
   font-weight: 500;
   top: 33px;
 } */
-
+#annuncio {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(8deg, rgba(0, 0, 0, 0.938813025210084) 49%, rgba(0, 0, 0, 0) 83%);
+}
 .nd {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -27,6 +30,13 @@
 }
 #firstContainer {
   max-width: 70px;
+}
+#avatar {
+  width: 30px;
+  height: 30px;
+}
+.listen {
+  font-size: smaller;
 }
 /* FOOTER A SCOMPARSA */
 /* 
