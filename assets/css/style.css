@@ -1,54 +1,32 @@
-.blc {
-  background-color: #2c2c2c;
-  width: 550px;
-  height: 100px;
-  cursor: pointer;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
-}
-.blc p {
-  font-size: 14px;
-  font-weight: 500;
-  top: 33px;
-}
-
 .nd {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-
-/* FOOTER A SCOMPARSA */
-
-/* @media (max-width: 399px) {
-  footer {
-    display: none;
-    background-color: #282828;
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    z-index: 2;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    color: grey;
-  }
+#loveSongs {
+  width: 20px;
 }
-
-footer i {
-  color: grey;
-  padding: 20px 20px 0 0;
-  font-size: 18px;
+.truncate-2-lines {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Numero di righe da mostrare */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis; /* Aggiungi i puntini di sospensione */
 }
-
-@media (min-width: 400px) {
-  .icons-wrapper {
-    display: none;
-  }
+#firstContainer {
+  max-width: 70px;
 }
-
-.mobile-footer i {
-  color: grey;
-} */
+#avatar {
+  width: 30px;
+  height: 30px;
+}
+.listen {
+  font-size: smaller;
+}
+.nav-link:hover {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
 .sidebar {
   overflow-y: auto; /* Imposta lo scorrimento verticale automatico */
