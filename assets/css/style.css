@@ -10,10 +10,10 @@
   font-weight: 500;
   top: 33px;
 } */
-#annuncio {
+/* #annuncio {
   background: rgb(0, 0, 0);
   background: linear-gradient(8deg, rgba(0, 0, 0, 0.938813025210084) 49%, rgba(0, 0, 0, 0) 83%);
-}
+} */
 .nd {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -37,6 +37,11 @@
 }
 .listen {
   font-size: smaller;
+}
+.nav-link:hover {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 /* FOOTER A SCOMPARSA */
 /* 
