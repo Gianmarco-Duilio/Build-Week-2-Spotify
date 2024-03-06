@@ -4,18 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Build week 2 demo spotify</title>
+    <!-- Collegamento bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <!-- Collegamento Fontawesome -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <!-- Collegamento icon bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -23,13 +26,15 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <!-- Collegamento css -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body class="bg-black">
+    <!-- SIDEBAR DI SINISTRA -->
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-2 d-none d-lg-block bg-black d-flex flex-column">
-          <div class="d-flex flex-column flex-grow-1 text-white">
+          <div class="sidebar d-flex flex-column flex-grow-1 text-white">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
               <span class="fs-4">...</span>
             </a>
@@ -116,6 +121,7 @@
           </div>
         </div>
         <div class="col-lg-8 col-md-12">
+          <!-- JUMBOTRON -->
           <div class="container mt-4">
             <div class="jumbotron bg-black bg-gradient d-none d-md-block">
               <div class="row">
@@ -189,7 +195,7 @@
               <div class="col-6 col-xl-4 d-flex py-2">
                 <div><img src="./assets/imgs/main/image-1.jpg" class="nd" width="100px" /></div>
                 <div class="blc text-white bg-secondary">
-                  <p>early stage emily syndrome</p>
+                  <p>Early stage emily syndrome</p>
                 </div>
               </div>
               <div class="col-6 col-xl-4 d-flex py-2">
@@ -198,7 +204,7 @@
               </div>
               <div class="col-6 col-xl-4 d-flex py-2">
                 <div><img src="./assets/imgs/main/image-3.jpg" class="nd" width="100px" /></div>
-                <div class="blc text-white bg-secondary"><p>saggio vibes</p></div>
+                <div class="blc text-white bg-secondary"><p>Saggio vibes</p></div>
               </div>
               <div class="col-6 col-xl-4 d-flex py-2">
                 <div><img src="./assets/imgs/main/image-4.jpg" class="nd" width="100px" /></div>
@@ -214,60 +220,93 @@
               </div>
             </div>
           </div>
+          <!-- CARD PRIMO BLOCCO -->
           <div class="container">
             <h3 class="text-white my-4">Altro di ciò che ti piace</h3>
             <div class="row g-3">
               <div class="col-12 col-md-4 col-lg-2">
                 <div class="card text-white bg-secondary p-2">
-                  <img src="./assets/imgs/main/image-1.jpg" class="card-img-top rounded-2" alt="..." />
+                  <img
+                    src="./assets/imgs/main/foto1_prima_card.jpg"
+                    class="card-img-top rounded-2 album"
+                    alt="..."
+                    id="75621062"
+                  />
                   <div class="card-body">
-                    <h5 class="card-title">Titolo</h5>
-                    <p class="card-text">descrizione album</p>
+                    <h5 class="card-title">Bohemian Rhapsody</h5>
+                    <p class="card-text">Queen</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- -- -->
+              <div class="col-12 col-md-4 col-lg-2">
+                <div class="card text-white bg-secondary p-2">
+                  <img
+                    src="./assets/imgs/main/foto2_seconda_card.jpg"
+                    class="card-img-top rounded-2 album"
+                    alt="..."
+                    id="9410086"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Highway to Hell</h5>
+                    <p class="card-text">ac/dc</p>
                   </div>
                 </div>
               </div>
               <div class="col-12 col-md-4 col-lg-2">
                 <div class="card text-white bg-secondary p-2">
-                  <img src="./assets/imgs/main/image-2.jpg" class="card-img-top rounded-2" alt="..." />
+                  <img
+                    src="./assets/imgs/main/foto3_terza_card.jpg"
+                    class="card-img-top rounded-2 album"
+                    alt="..."
+                    id="12047952"
+                  />
                   <div class="card-body">
-                    <h5 class="card-title">Titolo</h5>
-                    <p class="card-text">descrizione album</p>
+                    <h5 class="card-title">Abbey Road (Remastered)</h5>
+                    <p class="card-text">The Beatles</p>
                   </div>
                 </div>
               </div>
               <div class="col-12 col-md-4 col-lg-2">
                 <div class="card text-white bg-secondary p-2">
-                  <img src="./assets/imgs/main/image-3.jpg" class="card-img-top rounded-2" alt="..." />
+                  <img
+                    src="https://api.deezer.com/album/87722792/image"
+                    class="card-img-top rounded-2 album"
+                    alt="..."
+                    id="87722792"
+                  />
                   <div class="card-body">
-                    <h5 class="card-title">Titolo</h5>
-                    <p class="card-text">descrizione album</p>
+                    <h5 class="card-title">Gioventù bruciata</h5>
+                    <p class="card-text">Mahmood</p>
                   </div>
                 </div>
               </div>
               <div class="col-12 col-md-4 col-lg-2">
                 <div class="card text-white bg-secondary p-2">
-                  <img src="./assets/imgs/main/image-4.jpg" class="card-img-top rounded-2" alt="..." />
+                  <img
+                    src="https://api.deezer.com/album/397544257/image"
+                    class="card-img-top rounded-2 album"
+                    alt="..."
+                    id="397544257"
+                  />
                   <div class="card-body">
-                    <h5 class="card-title">Titolo</h5>
-                    <p class="card-text">descrizione album</p>
+                    <h5 class="card-title">Rush</h5>
+                    <p class="card-text">Maneskin - primo posto in Italia</p>
                   </div>
                 </div>
               </div>
               <div class="col-12 col-md-4 col-lg-2">
                 <div class="card text-white bg-secondary p-2">
-                  <img src="./assets/imgs/main/image-5.jpg" class="card-img-top rounded-2" alt="..." />
+                  <img
+                    src="https://api.deezer.com/album/384842207/image"
+                    class="card-img-top rounded-2 album"
+                    alt="..."
+                    id="384842207"
+                  />
                   <div class="card-body">
-                    <h5 class="card-title">Titolo</h5>
-                    <p class="card-text">descrizione album</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4 col-lg-2">
-                <div class="card text-white bg-secondary p-2">
-                  <img src="./assets/imgs/main/image-5.jpg" class="card-img-top rounded-2" alt="..." />
-                  <div class="card-body">
-                    <h5 class="card-title">Titolo</h5>
-                    <p class="card-text">descrizione album</p>
+                    <h5 class="card-title">Disumano</h5>
+                    <p class="card-text">Fedez- sesto album per l'artista</p>
                   </div>
                 </div>
               </div>
@@ -275,59 +314,89 @@
           </div>
           <!-- CARD SECONDO BLOCCO -->
           <div class="container">
-            <h3 class="text-white my-4">Altro di ciò che ti piace</h3>
+            <h3 class="text-white my-4">Prova qualcos'altro</h3>
             <div class="row g-3">
               <div class="col-12 col-md-4 col-lg-2">
                 <div class="card text-white bg-secondary p-2">
-                  <img src="./assets/imgs/main/image-1.jpg" class="card-img-top rounded-2" alt="..." />
+                  <img
+                    src="https://api.deezer.com/album/74434962/image"
+                    class="card-img-top rounded-2 album"
+                    alt="..."
+                    id="74434962"
+                  />
                   <div class="card-body">
-                    <h5 class="card-title">Titolo</h5>
-                    <p class="card-text">descrizione album</p>
+                    <h5 class="card-title">A Star Is Born Soundtrack</h5>
+                    <p class="card-text">Lady Gaga-pubblicazione 2018</p>
                   </div>
                 </div>
               </div>
               <div class="col-12 col-md-4 col-lg-2">
                 <div class="card text-white bg-secondary p-2">
-                  <img src="./assets/imgs/main/image-2.jpg" class="card-img-top rounded-2" alt="..." />
+                  <img
+                    src="https://api.deezer.com/album/108447472/image"
+                    class="card-img-top rounded-2 album"
+                    alt="..."
+                    id="108447472"
+                  />
                   <div class="card-body">
-                    <h5 class="card-title">Titolo</h5>
-                    <p class="card-text">descrizione album</p>
+                    <h5 class="card-title">Lover</h5>
+                    <p class="card-text">Taylor Swift-vendute oltre 6 milioni di copie</p>
                   </div>
                 </div>
               </div>
               <div class="col-12 col-md-4 col-lg-2">
                 <div class="card text-white bg-secondary p-2">
-                  <img src="./assets/imgs/main/image-3.jpg" class="card-img-top rounded-2" alt="..." />
+                  <img
+                    src="https://api.deezer.com/album/493937441/image"
+                    class="card-img-top rounded-2 album"
+                    alt="..."
+                    id="493937441"
+                  />
                   <div class="card-body">
-                    <h5 class="card-title">Titolo</h5>
-                    <p class="card-text">descrizione album</p>
+                    <h5 class="card-title">E poi siamo finiti nel vortice</h5>
+                    <p class="card-text">Annalisa</p>
                   </div>
                 </div>
               </div>
               <div class="col-12 col-md-4 col-lg-2">
                 <div class="card text-white bg-secondary p-2">
-                  <img src="./assets/imgs/main/image-4.jpg" class="card-img-top rounded-2" alt="..." />
+                  <img
+                    src="https://api.deezer.com/album/445968695/image"
+                    class="card-img-top rounded-2 album"
+                    alt="..."
+                    id="445968695"
+                  />
                   <div class="card-body">
-                    <h5 class="card-title">Titolo</h5>
-                    <p class="card-text">descrizione album</p>
+                    <h5 class="card-title">Materia (Prisma)</h5>
+                    <p class="card-text">Marco Mengoni-ottavo album</p>
                   </div>
                 </div>
               </div>
               <div class="col-12 col-md-4 col-lg-2">
                 <div class="card text-white bg-secondary p-2">
-                  <img src="./assets/imgs/main/image-5.jpg" class="card-img-top rounded-2" alt="..." />
+                  <img
+                    src="https://api.deezer.com/album/129682632/image"
+                    class="card-img-top rounded-2 album"
+                    alt="..."
+                    id="129682632"
+                  />
                   <div class="card-body">
-                    <h5 class="card-title">Titolo</h5>
-                    <p class="card-text">descrizione album</p>
+                    <h5 class="card-title">Gioventù brucata</h5>
+                    <p class="card-text">Pinguini tattici nucleari</p>
                   </div>
                 </div>
               </div>
               <div class="col-12 col-md-4 col-lg-2">
                 <div class="card text-white bg-secondary p-2">
-                  <img src="./assets/imgs/main/image-5.jpg" class="card-img-top rounded-2" alt="..." />
+                  <img
+                    src="https://api.deezer.com/album/182811182/image"
+                    class="card-img-top rounded-2 album"
+                    alt="..."
+                    id="182811182"
+                  />
                   <div class="card-body">
-                    <h5 class="card-title">Titolo</h5>
-                    <p class="card-text">descrizione album</p>
+                    <h5 class="card-title">Future Nostalgia</h5>
+                    <p class="card-text">Dua Lipa- pubblicazione 2020</p>
                   </div>
                 </div>
               </div>
@@ -413,7 +482,9 @@
         </div>
       </div>
     </div>
-    <!-- FOOTER -->
+    <!-- collegamento js -->
+    <script src="./home_page.js"></script>
+    <!-- collegamento js bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

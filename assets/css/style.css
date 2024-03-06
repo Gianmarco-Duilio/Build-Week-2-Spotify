@@ -49,3 +49,8 @@ footer i {
 .mobile-footer i {
   color: grey;
 } */
+
+.sidebar {
+  overflow-y: auto; /* Imposta lo scorrimento verticale automatico */
+  max-height: calc(100vh - 56px); /* Imposta l'altezza massima in base all'altezza del viewport */
+}

@@ -1,0 +1,31 @@
+.card-img {
+  width: 169%;
+  height: auto;
+}
+
+.box-container-img {
+  text-align: center;
+}
+
+/* STILE FOTO QUADRATE SOTTO LA SCRITTA POPOLARI */
+.custom-img {
+  width: 50px; /* Imposta la larghezza desiderata */
+  height: auto; /* Mantieni l'aspetto originale */
+  margin-bottom: 10px; /* Aggiunge spazio tra le immagini */
+  margin-right: 10px; /* Aggiunge spazio tra le immagini e i titoli */
+}
+
+.title {
+  color: white; /* Colore del testo bianco */
+  margin-bottom: 5px; /* Aggiunge spazio tra i titoli e i sottotitoli */
+}
+
+.artist {
+  padding-left: 215px;
+  color: white;
+}
+
+.sidebar {
+  overflow-y: auto; /* Imposta lo scorrimento verticale automatico */
+  max-height: calc(100vh - 56px); /* Imposta l'altezza massima in base all'altezza del viewport */
+}
