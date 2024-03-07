@@ -22,13 +22,26 @@
 .listen {
   font-size: smaller;
 }
-.nav-link:hover {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+a:hover {
+  color: #ffffff;
+}
+a {
+  color: rgb(95, 95, 95);
 }
 
-.sidebar {
+.scrollbar {
   overflow-y: auto; /* Imposta lo scorrimento verticale automatico */
-  max-height: calc(100vh - 56px); /* Imposta l'altezza massima in base all'altezza del viewport */
+  max-height: calc(110vh - 56px); /* Imposta l'altezza massima in base all'altezza del viewport */
+}
+#scroll::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+#scroll::-webkit-scrollbar {
+  width: 15px;
+  background-color: #00000000;
+}
+
+#scroll::-webkit-scrollbar-thumb {
+  background-color: #35353580;
 }

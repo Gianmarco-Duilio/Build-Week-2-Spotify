@@ -34,24 +34,24 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-2 d-none d-lg-block bg-black d-flex flex-column">
-          <div class="sidebar d-flex flex-column flex-grow-1 text-white">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <div class="scrollbar d-flex flex-column flex-grow-1 text-white">
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
               <span class="fs-4">...</span>
             </a>
 
             <ul class="nav flex-column mb-4">
               <li class="nav-item">
-                <a href="#" class="nav-link text-white-50"
+                <a href="#" class="nav-link active text-white-50 fw-bolder"
                   ><img src="assets/svg/svgexport-1.svg" alt="" /><span> Home </span></a
                 >
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link text-white-50">
+                <a href="#" class="nav-link active text-white-50 fw-bolder">
                   <img src="assets/svg/svgexport-4.svg" alt="" /><span> Cerca</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link text-white-50"
+                <a href="#" class="nav-link active text-white-50 fw-bolder"
                   ><img src="assets/svg/svgexport-6.svg" alt="" /><span> La Tua Libreria</span>
                 </a>
               </li>
@@ -59,12 +59,12 @@
 
             <ul class="nav flex-column mb-auto">
               <li class="nav-item">
-                <a href="#" class="nav-link text-white-50">
+                <a href="#" class="nav-link active text-white-50 fw-bolder">
                   <i class="bi bi-plus-square-fill"></i><span> Crea playlist </span></a
                 >
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link text-white-50">
+                <a href="#" class="nav-link active text-white-50 fw-bolder">
                   <img
                     id="loveSongs"
                     aria-hidden="false"
@@ -89,46 +89,48 @@
                     src="https://i.ibb.co/zXR340n/Schermata-2024-03-04-alle-12-33-49.png"
                     alt=""
                     id="loveSongs"
-                  /><span> I tuoi episodi</span>
+                  /><span class="fw-bolder"> I tuoi episodi</span>
                 </a>
               </li>
             </ul>
             <hr />
-            <ul class="nav flex-column mb-auto">
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-              <li><a href="#" class="text-white-50 text-decoration-none">PROVA</a></li>
-            </ul>
+            <div class="scrollbar" id="scroll">
+              <ul class="nav flex-column mb-auto">
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+                <li><a href="#" class="text-decoration-none">PROVA</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="col-lg-8 col-md-12">
+        <div class="col-lg-8 col-md-12 scrollbar" id="scroll">
           <!-- JUMBOTRON -->
           <div class="container mt-4">
             <div id="annuncio" class="jumbotron bg-gradient rounded-2">
@@ -339,15 +341,6 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-md-4 col-xl-2">
-                <div class="card text-white bg-secondary p-2">
-                  <img src="./assets/imgs/main/image-5.jpg" class="card-img-top rounded-2" alt="..." />
-                  <div class="card-body">
-                    <h5 class="card-title">Titolo</h5>
-                    <p class="card-text">descrizione album</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <!-- CARD SECONDO BLOCCO -->
@@ -447,43 +440,43 @@
               <span class="fs-6 fw-bolder">Attività amici</span>
 
               <div>
-                <a href="#"><i class="bi bi-person-add text-white-50"></i></a>
-                <a href="#"><i class="bi bi-x-lg text-white-50 m-2"></i></a>
+                <a href="#"><i class="bi bi-person-add"></i></a>
+                <a href="#"><i class="bi bi-x-lg m-2"></i></a>
               </div>
             </div>
 
             <ul class="nav flex-column mb-4">
-              <li class="nav-item d-flex flex-row text-white-50">
+              <li class="nav-item d-flex flex-row">
                 <img src="assets/account/boy.png" alt="" id="avatar" class="me-2 mt-2" />
                 <div>
                   <div>
-                    <a href="#" class="nav-link fw-bolder p-0 text-white-50 pb-0"> Marco Rossi</a>
+                    <a href="#" class="nav-link text-white-50 fw-bolder p-0 pb-0"> Marco Rossi</a>
                     <p class="listen">
                       Sta ascoltando <img src="assets/svg/point.svg" alt="" class="pt-2" /> Bob Marley and The Wailers
                     </p>
                   </div>
                 </div>
               </li>
-              <li class="nav-item d-flex flex-row text-white-50">
+              <li class="nav-item d-flex flex-row">
                 <img src="assets/account/man (1).png" alt="" id="avatar" class="me-2 mt-2" />
                 <div>
-                  <a href="#" class="nav-link fw-bolder p-0 text-white-50 pb-0 m"> Giuseppe Balilla</a>
+                  <a href="#" class="nav-link text-white-50 fw-bolder p-0 pb-0"> Giuseppe Balilla</a>
                   <p class="listen">
                     Sta ascoltando <img src="assets/svg/point.svg" alt="" class="pt-2" /> Anita Franklin
                   </p>
                 </div>
               </li>
-              <li class="nav-item d-flex flex-row text-white-50">
+              <li class="nav-item d-flex flex-row">
                 <img src="assets/account/man.png" alt="" id="avatar" class="me-2 mt-2" />
                 <div>
-                  <a href="#" class="nav-link fw-bolder p-0 text-white-50 pb-0"> Francesco Verdi</a>
+                  <a href="#" class="nav-link text-white-50 fw-bolder p-0 pb-0"> Francesco Verdi</a>
                   <p class="listen">Sta ascoltando <img src="assets/svg/point.svg" alt="" class="pt-2" /> Pop Smoke</p>
                 </div>
               </li>
-              <li class="nav-item d-flex flex-row text-white-50">
+              <li class="nav-item d-flex flex-row">
                 <img src="assets/account/woman.png" alt="" id="avatar" class="me-2 mt-2" />
                 <div>
-                  <a href="#" class="nav-link fw-bolder p-0 text-white-50 pb-0"> Alice Giallini</a>
+                  <a href="#" class="nav-link text-white-50 fw-bolder p-0 pb-0"> Alice Giallini</a>
                   <p class="listen">
                     Sta ascoltando <img src="assets/svg/point.svg" alt="" class="pt-2" /> Frank Sinatra
                   </p>
