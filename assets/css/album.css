@@ -1,0 +1,255 @@
+
+:root {
+    --spotify-green: #1DB954;
+    --footer-height: 40px;
+}
+
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    max-height: 100vh;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+
+
+
+
+
+
+
+
+.playlists {
+    font-weight: 400 !important;
+}
+
+.playlists ul li a span {
+    left: 0px;
+}
+
+
+.arrow-container {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #434343;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playlist-arrows  {
+    display: flex;
+    align-items: center;
+}
+
+.arrow-container {
+    margin-right: 15px !important;
+}
+
+.playlist-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.playlist-header {
+    padding: 20px;
+}
+
+.playlist-top-email {
+    display: flex;
+    align-items: center;
+    background-color: #434343;
+    border-radius: 20px;
+    color:white;
+}
+
+.playlist-header .arrow-container {
+    background-color: #535353;
+    margin: 2px;
+}
+
+.playlist-top-email span {
+    padding: 0 10px;
+}
+
+
+.playlist-header {
+background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(119,119,119,1) 100%);
+}
+
+.playlist-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.playlist-cover img {
+    width: 250px;
+    height: 250px;
+    box-shadow: 0px 2px 35px -1px rgba(0,0,0,0.45);
+-webkit-box-shadow: 0px 2px 35px -1px rgba(0,0,0,0.45);
+-moz-box-shadow: 0px 2px 35px -1px rgba(0,0,0,0.45);
+}
+
+.playlist-info {
+    color:white;
+    padding-left: 20px;
+}
+
+.playlist-public {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "AvenirLTStd-Black";
+}
+
+.playlist-title {
+    font-size: 86px;
+    font-weight: 1000;
+
+    margin-top: 10px;
+    font-family: "AvenirLTStd-Black";
+}
+
+.playlist-description {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+    color:#B5B5B5;
+}
+
+.playlist-stats  img{
+    position: relative;
+    top: 6px;
+}
+
+.playlist-stats span:first-of-type {
+    font-weight: 1000;
+    font-family: "AvenirLTStd-Black";
+}
+
+
+.playlist-buttons-left, .playlist-buttons-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playlist-buttons-resume-pause {
+    background-color: var(--spotify-green);
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playlist-buttons-like {
+    margin-left: 20px;
+}
+
+.playlist-songs-container {
+    height: 1000px;
+    padding: 20px;
+    background: rgb(95,95,95);
+background: linear-gradient(180deg, rgba(95,95,95,1) 0%, rgba(18,18,18,1) 22%, rgba(18,18,18,1) 100%);
+}
+
+.playlist-buttons-download, .playlist-buttons-three-dot {
+    margin-left: 20px;
+}
+
+.playlist-buttons-download svg path, .playlist-buttons-three-dot svg path, .playlist-buttons-search svg path {
+    fill: #CACACA;
+}
+
+.playlist-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.playlist-buttons-order {
+    color:#CACACA;
+}
+
+.playlist-buttons-order {
+    padding-left: 20px;
+}
+
+.playlist-songs {
+    margin-top: 20px;
+}
+
+.playlist-songs table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.playlist-songs table tr td, .playlist-songs table tr th {
+    padding: 10px;
+    color: #CACACA;
+}
+
+.playlist-songs table tr th {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+
+.playlist-songs table tr:first-of-type {
+    border-bottom: 1px solid #CACACA;
+}
+
+.playlist-songs table th {
+    text-align: left;
+}
+
+.playlist-songs table tr th:first-child{
+    width: 2%;
+}
+
+.playlist-songs table tr th:nth-child(2) {
+    width: 40%;
+}
+
+.song-image img {
+    width: 34px;
+    height: 34px;
+}
+
+.song-title {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.song-name-album {
+    padding-left: 15px;
+    letter-spacing: 0.5px;
+}
+
+
+.song-name  {
+    font-weight: 400;
+    font-size:14px;
+    color: white;
+}
+
+.song-artist, .song-album, .song-date-added, .footer-player-left-song-artist, .player-time, .song-duration {
+    font-size: 12px;
+    margin-top: 6px;
+    color: #898989 !important;
+}
+
+

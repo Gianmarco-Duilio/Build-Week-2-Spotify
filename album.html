@@ -1,0 +1,323 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Build week 2 demo spotify</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/album.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-black">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-2 d-none d-lg-block bg-black d-flex flex-column">
+          <div class="d-flex flex-column flex-grow-1 text-white">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+              <span class="fs-4">...</span>
+            </a>
+
+            <ul class="nav flex-column mb-4">
+              <li class="nav-item">
+                <a href="#" class="nav-link text-white-50"><i class="bi bi-house-door-fill"></i><span> Home </span></a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-white-50"> <i class="bi bi-search"></i><span> Cerca</span> </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-white-50"
+                  ><i class="bi bi-collection-play-fill"></i><span> La Tua Libreria</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav flex-column mb-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link text-white-50">
+                  <i class="bi bi-plus-square-fill"></i><span> Crea playlist </span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-white-50">
+                  <img
+                    id="loveSongs"
+                    aria-hidden="false"
+                    draggable="false"
+                    loading="eager"
+                    src="https://misc.scdn.co/liked-songs/liked-songs-300.png"
+                    alt="Brani che ti piacciono"
+                    class="mMx2LUixlnN_Fu45JpFB CmkY1Ag0tJDfnFXbGgju _EShSNaBK1wUIaZQFJJQ Yn2Ei5QZn19gria6LjZj"
+                    srcset="
+                      https://misc.scdn.co/liked-songs/liked-songs-300.png 150w,
+                      https://misc.scdn.co/liked-songs/liked-songs-300.png 300w,
+                      https://misc.scdn.co/liked-songs/liked-songs-640.png 320w,
+                      https://misc.scdn.co/liked-songs/liked-songs-640.png 640w
+                    "
+                    sizes="(min-width: 1280px) 232px, 192px"
+                  /><span> Preferiti</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link text-white-50"
+                  ><i class="bi bi-bookmark-fill"></i> <span> I tuoi episodi</span>
+                </a>
+              </li>
+            </ul>
+            <hr />
+            <ul class="nav flex-column mb-auto">
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+              <li>PROVA</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-12">
+          <!--Album-->
+          <div class="right">
+            <div class="playlist-header">
+              <div class="playlist-top">
+                <div class="playlist-arrows">
+                  <div class="arrow-container">
+                    <img src="./assets/Icone/LeftArrow.svg" alt="" />
+                  </div>
+                  <div class="arrow-container">
+                    <img src="./assets/Icone/RightArrow.svg" alt="" />
+                  </div>
+                </div>
+                <div class="playlist-top-email">
+                  <div class="arrow-container">
+                    <img src="./assets/account/man.png" alt="" />
+                  </div>
+                  <span>account</span>
+                </div>
+              </div>
+              <div class="playlist-content">
+                <div class="playlist-cover">
+                  <img src="./assets/imgs/main/image-11.jpg" alt="" />
+                </div>
+                <div class="playlist-info">
+                  <div class="playlist-public">ALBUM</div>
+                  <div class="playlist-title">Imagine Dragons</div>
+                  <div class="playlist-description">Mercury - Acts 1 & 2</div>
+                  <div style="height: 10px"></div>
+                  <div class="playlist-stats">
+                    <img src="./assets/Icone/spotify-logo.png" width="24px" height="24px" alt="" />
+                    <span>Imagine Dragons</span>
+                    <span>5,131,321 likes · </span>
+                    <span>32 songs, </span>
+                    <span>1 hr 42 min </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="playlist-songs-container">
+              <div class="playlist-buttons">
+                <div class="playlist-buttons-left">
+                  <div class="playlist-buttons-resume-pause">
+                    <img src="./assets/Icone/Pause.svg" alt="" />
+                  </div>
+                  <div class="playlist-buttons-like">
+                    <img src="./assets/Icone/FiiledLike.svg" alt="" class="spotify-color" />
+                  </div>
+                  <div class="playlist-buttons-download">
+                    <img src="./assets/Icone/Download.svg" alt="" />
+                  </div>
+                  <div class="playlist-buttons-three-dot">
+                    <img src="./assets/Icone/ThreeDots.svg" alt="" />
+                  </div>
+                </div>
+                <div class="playlist-buttons-right">
+                  <div class="playlist-buttons-search">
+                    <img src="./assets/Icone/Search.svg" alt="" />
+                  </div>
+                  <div class="playlist-buttons-order">Custom Order</div>
+                </div>
+              </div>
+              <div class="playlist-songs">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>#</th>
+                      <th>Title</th>
+                      <th>Album</th>
+                      <th>Date Added</th>
+                      <th>
+                        <img src="./assets/Icone/Duration.svg" alt="" />
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td class="song-title">
+                        <div class="song-image">
+                          <img src="./assets/imgs/main/image-11.jpg" alt="" />
+                        </div>
+                        <div class="song-name-album">
+                          <div class="song-name">Enemy</div>
+                          <div class="song-artist">Imagine Dragons</div>
+                        </div>
+                      </td>
+                      <td class="song-album">Mercury</td>
+                      <td class="song-date-added">May 31, 2022</td>
+                      <td class="song-duration">2:36</td>
+                    </tr>
+
+                    <tr>
+                      <td>2</td>
+                      <td class="song-title">
+                        <div class="song-image">
+                          <img src="./assets/imgs/main/image-11.jpg" alt="" />
+                        </div>
+                        <div class="song-name-album">
+                          <div class="song-name">Enemy</div>
+                          <div class="song-artist">Imagine Dragons</div>
+                        </div>
+                      </td>
+                      <td class="song-album">Mercury</td>
+                      <td class="song-date-added">May 31, 2022</td>
+                      <td class="song-duration">2:36</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td class="song-title">
+                        <div class="song-image">
+                          <img src="./assets/imgs/main/image-11.jpg" alt="" />
+                        </div>
+                        <div class="song-name-album">
+                          <div class="song-name">Enemy</div>
+                          <div class="song-artist">Imagine Dragons</div>
+                        </div>
+                      </td>
+                      <td class="song-album">Mercury</td>
+                      <td class="song-date-added">May 31, 2022</td>
+                      <td class="song-duration">2:36</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td class="song-title">
+                        <div class="song-image">
+                          <img src="./assets/imgs/main/image-11.jpg" alt="" />
+                        </div>
+                        <div class="song-name-album">
+                          <div class="song-name">Enemy</div>
+                          <div class="song-artist">Imagine Dragons</div>
+                        </div>
+                      </td>
+                      <td class="song-album">Mercury</td>
+                      <td class="song-date-added">May 31, 2022</td>
+                      <td class="song-duration">2:36</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td class="song-title">
+                        <div class="song-image">
+                          <img src="./assets/imgs/main/image-11.jpg" alt="" />
+                        </div>
+                        <div class="song-name-album">
+                          <div class="song-name">Enemy</div>
+                          <div class="song-artist">Imagine Dragons</div>
+                        </div>
+                      </td>
+                      <td class="song-album">Mercury</td>
+                      <td class="song-date-added">May 31, 2022</td>
+                      <td class="song-duration">2:36</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div class="col-lg-2 d-none d-lg-block bg-black d-flex flex-column">
+          <div class="d-flex flex-column text-white">
+            <div class="d-flex justify-content-between mt-3">
+              <span class="fs-6 fw-bolder">Attività amici</span>
+              <div>
+                <a href="#"><i class="bi bi-person-add text-white-50"></i></a>
+                <a href="#"><i class="bi bi-x-lg text-white-50"></i></a>
+              </div>
+            </div>
+
+            <ul class="nav flex-column mb-4">
+              <li class="nav-item d-flex row text-white-50">
+                <a href="#" class="nav-link fw-bolder text-white-50 pb-0"
+                  ><img src="assets/account/boy.png" alt="" class="mx-2" /> Marco Rossi</a
+                >
+                <p class="ms-5">Sta ascoltando Bob Marley and The Wailers</p>
+              </li>
+              <li class="nav-item d-flex row text-white-50">
+                <a href="#" class="nav-link fw-bolder text-white-50 pb-0 m"
+                  ><img src="assets/account/man (1).png" alt="" class="mx-2" /> Giuseppe Balilla</a
+                >
+                <p class="ms-5">Sta ascoltando Anita Franklin</p>
+              </li>
+              <li class="nav-item d-flex row text-white-50">
+                <a href="#" class="nav-link fw-bolder text-white-50 pb-0"
+                  ><img src="assets/account/man.png" alt="" class="mx-2" /> Francesco Verdi</a
+                >
+                <p class="ms-5">Sta ascoltando Pop Smoke</p>
+              </li>
+              <li class="nav-item d-flex row text-white-50">
+                <a href="#" class="nav-link fw-bolder text-white-50 pb-0"
+                  ><img src="assets/account/woman.png" alt="" class="mx-2" /> Alice Giallini</a
+                >
+                <p class="ms-5">Sta ascoltando Frank Sinatra</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./album_page.js"></script>
+  </body>
+</html>
