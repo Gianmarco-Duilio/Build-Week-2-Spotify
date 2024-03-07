@@ -1,6 +1,6 @@
 
 :root {
-    --spotify-green: #1DB954;
+     --spotify-green: #1DB954; 
     --footer-height: 40px;
 }
 
@@ -253,3 +253,13 @@ background: linear-gradient(180deg, rgba(95,95,95,1) 0%, rgba(18,18,18,1) 22%, r
 }
 
 
+
+    /* animazioni */
+    .icon img:hover{transition: all 0.3s linear;
+    transform: scale(1.2);}
+
+      tr:hover{background-color: #333333 !important;}
+
+
+      .playlist-buttons-resume-pause:hover{transition: all 0.3s linear;
+        transform: scale(1.2);}
