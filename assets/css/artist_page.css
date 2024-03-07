@@ -22,10 +22,133 @@
 
 .artist {
   padding-left: 215px;
-  color: white;
+  color: #969696;
 }
 
 .sidebar {
   overflow-y: auto; /* Imposta lo scorrimento verticale automatico */
   max-height: calc(100vh - 56px); /* Imposta l'altezza massima in base all'altezza del viewport */
+}
+.sp:hover {
+  color: white !important;
+}
+.artname {
+  font-weight: bold;
+  color: white;
+  font-size: 90px;
+}
+.clr {
+  background-color: #1b1b1b;
+}
+.circle {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+}
+
+#flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.like {
+  position: relative;
+  top: 15px;
+  left: 10px;
+}
+
+.blocc {
+  position: relative;
+  right: 100px;
+  top: 17px;
+}
+.n {
+  color: #a4a4a4;
+  padding: 15px 15px 18px 15px;
+}
+#blc:hover {
+  background-color: black;
+}
+#blc:hover .n::before {
+  content: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"/></svg>');
+  width: 24px;
+  height: 24px;
+}
+#blc:hover .n {
+  visibility: hidden;
+}
+#blc .n::before {
+  content: ''; 
+}
+#visual{
+  padding-left: 15px;
+}
+#blc:hover svg {
+  visibility: visible; 
+}
+.striscia{
+  display: flex;
+  justify-content: space-between;
+  gap:30px;
+  margin-left: 20px;
+}
+
+.follow{
+  position: relative;
+  top:10px;
+  padding-inline: 20px;
+  border-radius:7px;
+  width:160px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #1D1D1D;
+  border-color: white;
+  color:white;
+}
+.follow:hover{
+  background-color: white;
+  color:#1D1D1D;
+  border-color: #1D1D1D;
+}
+
+
+
+
+
+
+footer {
+  padding-inline: 400px;
+  padding-top: 50px;
+}
+.icon {
+  padding-top: 50px;
+  width: 200px;
+  color: #7f7f7f;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  cursor: pointer;
+}
+.tt {
+  color: #787879;
+  font-size: 13px;
+  padding-top: 8px;
+}
+.btn1 {
+  color: #787879;
+  background-color: #141414;
+  border: 0.5px solid #787879;
+}
+.btn1:hover {
+  background-color: #787879;
+  color: #141414;
+}
+#tst:hover {
+  cursor: pointer;
+  color: white;
+  text-decoration: underline;
+}
+#mm {
+  cursor: pointer;
 }
