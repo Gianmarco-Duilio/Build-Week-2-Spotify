@@ -45,3 +45,9 @@ a {
 #scroll::-webkit-scrollbar-thumb {
   background-color: #35353580;
 }
+#clr{
+  background-color: #1B1B1B;
+}
+.sp:hover{
+  color:white !important;
+}
