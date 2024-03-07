@@ -118,8 +118,9 @@
 
 
 footer {
-  padding-inline: 400px;
-  padding-top: 50px;
+  padding-left:250px;
+  padding-right: 150px;
+  padding-top: 10px;
 }
 .icon {
   padding-top: 50px;
@@ -135,15 +136,7 @@ footer {
   font-size: 13px;
   padding-top: 8px;
 }
-.btn1 {
-  color: #787879;
-  background-color: #141414;
-  border: 0.5px solid #787879;
-}
-.btn1:hover {
-  background-color: #787879;
-  color: #141414;
-}
+
 #tst:hover {
   cursor: pointer;
   color: white;
