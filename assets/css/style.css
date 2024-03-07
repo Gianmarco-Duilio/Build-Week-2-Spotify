@@ -5,6 +5,9 @@
 #loveSongs {
   width: 20px;
 }
+#topCard {
+  margin-block: 10px;
+}
 .truncate-2-lines {
   overflow: hidden;
   display: -webkit-box;
@@ -45,9 +48,9 @@ a {
 #scroll::-webkit-scrollbar-thumb {
   background-color: #35353580;
 }
-#clr{
-  background-color: #1B1B1B;
+#clr {
+  background-color: #1b1b1b;
 }
-.sp:hover{
-  color:white !important;
+.sp:hover {
+  color: white !important;
 }
