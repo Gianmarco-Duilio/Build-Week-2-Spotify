@@ -29,6 +29,17 @@
 }
 
 .sidebar {
-  overflow-y: auto; /* Imposta lo scorrimento verticale automatico */
-  max-height: calc(100vh - 56px); /* Imposta l'altezza massima in base all'altezza del viewport */
+  overflow-y: auto;
+  max-height: calc(100vh - 56px);
+}
+
+/* DIMENSIONE CARD */
+.fixed-size-card {
+  width: 200px;
+  height: 300px;
+}
+
+/* spazio tra i bottoni */
+.btn-group + .btn-group {
+  margin-left: 10px;
 }
