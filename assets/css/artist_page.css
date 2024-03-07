@@ -1,12 +1,17 @@
-.card-img {
-  width: 169%;
-  height: auto;
-}
-
 .box-container-img {
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
+.box-container-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.btn-success {
+  height: 40px;
+}
 /* STILE FOTO QUADRATE SOTTO LA SCRITTA POPOLARI */
 .custom-img {
   width: 50px; /* Imposta la larghezza desiderata */
@@ -79,43 +84,38 @@
   visibility: hidden;
 }
 #blc .n::before {
-  content: ''; 
+  content: "";
 }
-#visual{
+#visual {
   padding-left: 15px;
 }
 #blc:hover svg {
-  visibility: visible; 
+  visibility: visible;
 }
-.striscia{
+.striscia {
   display: flex;
   justify-content: space-between;
-  gap:30px;
+  gap: 30px;
   margin-left: 20px;
 }
 
-.follow{
+.follow {
   position: relative;
-  top:10px;
+  top: 10px;
   padding-inline: 20px;
-  border-radius:7px;
-  width:160px;
+  border-radius: 7px;
+  width: 160px;
   height: 40px;
   font-size: 20px;
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
   border-color: white;
-  color:white;
+  color: white;
 }
-.follow:hover{
+.follow:hover {
   background-color: white;
-  color:#1D1D1D;
-  border-color: #1D1D1D;
+  color: #1d1d1d;
+  border-color: #1d1d1d;
 }
-
-
-
-
-
 
 footer {
   padding-inline: 400px;
@@ -151,4 +151,20 @@ footer {
 }
 #mm {
   cursor: pointer;
+}
+.scrollbar {
+  overflow-y: auto; /* Imposta lo scorrimento verticale automatico */
+  max-height: calc(110vh - 56px); /* Imposta l'altezza massima in base all'altezza del viewport */
+}
+#scroll::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+#scroll::-webkit-scrollbar {
+  width: 15px;
+  background-color: #00000000;
+}
+
+#scroll::-webkit-scrollbar-thumb {
+  background-color: #35353580;
 }
