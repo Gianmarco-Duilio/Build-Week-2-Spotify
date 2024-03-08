@@ -16,13 +16,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
 .playlists {
     font-weight: 400 !important;
 }
@@ -232,6 +225,20 @@ background: linear-gradient(180deg, rgba(95,95,95,1) 0%, rgba(18,18,18,1) 22%, r
     display: flex;
     align-items: center;
     flex-direction: row;
+}
+
+
+@media screen and (min-width: 601px) {
+    div.playlist-title {
+        font-size: 80px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    div.playlist-title {
+        font-size: 30px;
+    }
 }
 
 .song-name-album {
