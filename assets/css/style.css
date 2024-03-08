@@ -2,6 +2,62 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+.arrow-container {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #434343;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playlist-arrows {
+  display: flex;
+  align-items: center;
+}
+
+.playlist-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playlist-header {
+  padding: 20px;
+}
+
+.playlist-top-email {
+  display: flex;
+  align-items: center;
+  background-color: #434343;
+  border-radius: 20px;
+  color: white;
+}
+
+.playlist-header .arrow-container {
+  background-color: #535353;
+  margin: 2px;
+}
+
+.playlist-top-email span {
+  padding: 0 10px;
+}
+
+/* animazioni */
+.icon img:hover {
+  transition: all 0.3s linear;
+  transform: scale(1.2);
+}
+
+tr:hover {
+  background-color: #333333 !important;
+}
+
+.playlist-buttons-resume-pause:hover {
+  transition: all 0.3s linear;
+  transform: scale(1.2);
+}
 #loveSongs {
   width: 20px;
 }
@@ -53,4 +109,18 @@ a {
 }
 .sp:hover {
   color: white !important;
+}
+#imgTopCard {
+  width: 70px;
+}
+.card-title,
+.card-text {
+  font-size: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#topCard {
+  background-color: #1b1b1b;
 }
