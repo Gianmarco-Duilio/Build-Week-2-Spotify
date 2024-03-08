@@ -3,6 +3,16 @@
   height: 100%;
   overflow: hidden;
 }
+.custom-img {
+  width: 15px;
+  height: 15px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.botta{
+  position: relative;
+  top:10px;
+}
 .spzt {
   margin: 0;
   padding: 0px;
@@ -30,7 +40,10 @@
   color: white;
   margin-bottom: 5px;
 }
-
+.card-img{
+  width:100%;
+  height: 100%;
+}
 .artist {
   padding-left: 120px;
   color: #969696;
@@ -243,4 +256,73 @@ ul li a:hover {
 .iff:hover {
   color: #fff;
   text-decoration: underline;
+}
+
+.arrow-container {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: 434343;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.iconna {
+  cursor: pointer;
+}
+.playlist-arrows {
+  display: flex;
+  justify-content: space-between;
+}
+
+.playlist-top {
+  display: flex;
+  justify-content: space-between;
+  gap:1050px;
+  align-items: center;
+  position: absolute ;
+  top:5px;
+}
+
+.playlist-header {
+  padding: 20px;
+}
+
+.playlist-top-email {
+  display: flex;
+  align-items: center;
+  background-color: #434343;
+  border-radius: 20px;
+  color: white;
+}
+
+.playlist-header .arrow-container {
+  background-color: #535353;
+  margin: 2px;
+}
+
+.playlist-top-email span {
+  padding: 0 10px;
+}
+
+.iconna img:hover {
+  transition: all 0.3s linear;
+  transform: scale(1.2);
+}
+
+.playlist-buttons-resume-pause:hover {
+  transition: all 0.3s linear;
+  transform: scale(1.2);
+}
+
+:root {
+  --spotify-green: #1DB954; 
+}
+.playlists {
+ font-weight: 400 !important;
+}
+.playlists ul li a span {
+ left: 80px;
 }
