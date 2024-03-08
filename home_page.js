@@ -1,6 +1,5 @@
-//☑️LE TUE RIPRODUZIONI - BUONASERA
+//☑LE TUE RIPRODUZIONI - BUONASERA
 const artistNames = ["Eminem", "Nelly", "Ice Cube", "Migos", "Snoop Dogg", "Lil Wayne"];
-
 function fetchArtistData(artistName) {
   return fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${artistName}`, {
     method: "GET",
@@ -13,7 +12,6 @@ function fetchArtistData(artistName) {
       if (!response.ok) {
         throw new Error("Errore durante il recupero dei dati");
       }
-
       return response.json();
     })
     .then((data) => {
@@ -28,22 +26,21 @@ function fetchArtistData(artistName) {
 
 const container = document.querySelector("#cardTop");
 
-function createArtistCard(artist) {
+function createCard(artist) {
   const card = document.createElement("div");
   card.classList.add("col-6", "col-xl-4");
 
   card.innerHTML = `
-      <div id="topCard" class="d-flex rounded-2 bg-dark.bg-gradient">
-          <div><img src="${artist.picture_medium}" class="rounded-start"  id="imgTopCard"/></div>
+      <div id="topCard" class="d-flex rounded-2 bg-dark bg-gradient ">
+          <div><img src="${artist.picture_small}" class="rounded-start" /></div>
           <div class="blc text-white">
-              <p class="truncate-2-lines my-auto text-white ms-2">${artist.name}</p>
+              <p class="truncate-2-lines my-auto text-white ms-2 mt-3">${artist.name}</p>
           </div>
       </div>
   `;
 
   return card;
 }
-
 // -----
 //☑️CARD ALBUM
 // Array degli ID degli album
@@ -91,9 +88,9 @@ async function generateAlbumCardsWithBootstrapAndListeners() {
       if (album) {
         const html = `
                  
-                  <div class="col-12 col-md-4 col-xl-2">
-                      <div class="card text-white bg-secondary p-2 fixed-size-card" data-album-id="${albumId}">
-                          <img src="${album.cover}" class="card-img-top rounded-2 album" alt="${album.title}">
+                  <div class="col-12 col-md-4 col-xl-2 g-2">
+                      <div class="card text-white bg-dark bg-gradient p-2 fixed-size-card" data-album-id="${albumId}">
+                          <img src="${album.cover_medium}" class="card-img-top rounded-2 album" alt="${album.title}">
                           <div class="card-body">
                               <h5 class="card-title">${album.title}</h5>
                               <p class="card-text">${album.artist.name}</p>
