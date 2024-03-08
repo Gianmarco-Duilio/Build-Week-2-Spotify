@@ -2,12 +2,37 @@
   --spotify-green: #1db954;
   --footer-height: 40px;
 }
+
 @media screen and (min-width: 601px) {
   div.playlist-title {
-    font-size: 80px;
+    font-size: 35px;
   }
 }
 @media screen and (max-width: 600px) {
+  div.playlist-title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 775px) {
+  div.playlist-title {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 774px) {
+  div.playlist-title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  div.playlist-title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 992px) {
   div.playlist-title {
     font-size: 30px;
   }
@@ -269,3 +294,41 @@ tr:hover {
   transition: all 0.3s linear;
   transform: scale(1.2);
 }
+
+@media (max-width: 551px) {
+  .playlist-cover img {
+    margin-top: 10px;
+    width: 100%;
+    /* Larghezza massima */
+    height: auto;
+    /* Altezza automatica */
+    /* object-fit: contain; */
+    /* Mantieni l'immagine proporzionata all'interno del contenitore */
+    position: relative;
+    bottom: 20px;
+  }
+  .playlist-content {
+    flex-direction: column;
+  }
+
+  .playlist-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Allinea gli elementi al centro verticalmente */
+    margin-top: 20px;
+    /* Aggiungi uno spazio sopra all'elemento di testo */
+  }
+}
+
+@media (max-width: 464px) {
+  tr .song-date-added .song-duration {
+    display: none !important;
+  }
+}
+
+/* @media  (min-width:464px) {
+           tr .song-date-added .song-duration {
+                 display: none !important;
+             }
+         } */
