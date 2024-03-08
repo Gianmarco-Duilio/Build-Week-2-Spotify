@@ -24,9 +24,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/css/album.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/home_page.css" />
   </head>
   <body class="bg-black">
+    <!-- ☑️SIDEBAR DI SINISTRA -->
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-2 d-none d-lg-block bg-black d-flex flex-column">
@@ -37,7 +38,7 @@
 
             <ul class="nav flex-column mb-4">
               <li class="nav-item">
-                <a href="#" class="nav-link active text-white-50 fw-bolder"
+                <a href="./home_page.html" class="nav-link active text-white-50 fw-bolder"
                   ><img src="assets/svg/svgexport-1.svg" alt="" /><span class="sp"> Home </span></a
                 >
               </li>
@@ -127,7 +128,8 @@
           </div>
         </div>
         <div class="col-lg-8 col-md-12 scrollbar" id="scroll">
-          <!--Album-->
+          <!-- ALBUM CREATI DA RICCARDO -->
+          <!-- ☑️PARTE SUPERIORE -->
           <div class="right">
             <div class="playlist-header">
               <div class="playlist-top">
@@ -147,25 +149,27 @@
                   <span>account</span>
                 </div>
               </div>
+              <!--  ☑️INSERITO ID=COPERTINA(per la foto), ID=TITOLO(per il titolo), ID=NOME ARTISTA(per l'artista)  ID=ALBUMTABLE()-->
               <div class="playlist-content">
                 <div class="playlist-cover">
-                  <img src="./assets/imgs/main/image-11.jpg" alt="" />
+                  <img src="./assets/imgs/main/image-11.jpg" alt="" id="copertina" />
                 </div>
                 <div class="playlist-info">
                   <div class="playlist-public">ALBUM</div>
-                  <div class="playlist-title">Imagine Dragons</div>
-                  <div class="playlist-description">Mercury - Acts 1 & 2</div>
+                  <div class="playlist-title" id="titolo">Imagine Dragons</div>
                   <div style="height: 10px"></div>
                   <div class="playlist-stats">
                     <img src="./assets/Icone/spotify-logo.png" width="24px" height="24px" alt="" />
-                    <span>Imagine Dragons</span>
-                    <span>5,131,321 likes · </span>
+                    <span id="nomeArtista">Imagine Dragons</span>
+
                     <span>32 songs, </span>
                     <span>1 hr 42 min </span>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- --- -->
             <div class="playlist-songs-container">
               <div class="playlist-buttons">
                 <div class="playlist-buttons-left">
@@ -193,100 +197,10 @@
                 </div>
               </div>
               <div class="playlist-songs">
-                <table>
-                  <tbody>
-                    <tr>
-                      <th>#</th>
-                      <th>Title</th>
-                      <th>Album</th>
-                      <th>Date Added</th>
-                      <th>
-                        <img src="./assets/Icone/Duration.svg" alt="" />
-                      </th>
-                    </tr>
-
-                    <tr>
-                      <td>1</td>
-                      <td class="song-title">
-                        <div class="song-image">
-                          <img src="./assets/imgs/main/image-11.jpg" alt="" />
-                        </div>
-                        <div class="song-name-album">
-                          <div class="song-name">Enemy</div>
-                          <div class="song-artist">Imagine Dragons</div>
-                        </div>
-                      </td>
-                      <td class="song-album">Mercury</td>
-                      <td class="song-date-added">May 31, 2022</td>
-                      <td class="song-duration">2:36</td>
-                    </tr>
-
-                    <tr>
-                      <td>2</td>
-                      <td class="song-title">
-                        <div class="song-image">
-                          <img src="./assets/imgs/main/image-11.jpg" alt="" />
-                        </div>
-                        <div class="song-name-album">
-                          <div class="song-name">Enemy</div>
-                          <div class="song-artist">Imagine Dragons</div>
-                        </div>
-                      </td>
-                      <td class="song-album">Mercury</td>
-                      <td class="song-date-added">May 31, 2022</td>
-                      <td class="song-duration">2:36</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td class="song-title">
-                        <div class="song-image">
-                          <img src="./assets/imgs/main/image-11.jpg" alt="" />
-                        </div>
-                        <div class="song-name-album">
-                          <div class="song-name">Enemy</div>
-                          <div class="song-artist">Imagine Dragons</div>
-                        </div>
-                      </td>
-                      <td class="song-album">Mercury</td>
-                      <td class="song-date-added">May 31, 2022</td>
-                      <td class="song-duration">2:36</td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td class="song-title">
-                        <div class="song-image">
-                          <img src="./assets/imgs/main/image-11.jpg" alt="" />
-                        </div>
-                        <div class="song-name-album">
-                          <div class="song-name">Enemy</div>
-                          <div class="song-artist">Imagine Dragons</div>
-                        </div>
-                      </td>
-                      <td class="song-album">Mercury</td>
-                      <td class="song-date-added">May 31, 2022</td>
-                      <td class="song-duration">2:36</td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td class="song-title">
-                        <div class="song-image">
-                          <img src="./assets/imgs/main/image-11.jpg" alt="" />
-                        </div>
-                        <div class="song-name-album">
-                          <div class="song-name">Enemy</div>
-                          <div class="song-artist">Imagine Dragons</div>
-                        </div>
-                      </td>
-                      <td class="song-album">Mercury</td>
-                      <td class="song-date-added">May 31, 2022</td>
-                      <td class="song-duration">2:36</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div id="albumTable"></div>
               </div>
             </div>
           </div>
-          <!---->
         </div>
         <div class="col-lg-2 d-none d-lg-block bg-black pe-2">
           <div class="d-flex flex-column text-white">
@@ -346,6 +260,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!-- collegamento js -->
     <script src="./album_page.js"></script>
   </body>
 </html>

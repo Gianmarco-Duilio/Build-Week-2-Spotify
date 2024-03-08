@@ -1,68 +1,100 @@
-// 2)PRENDIAMO Il VALORE CHE CI HA TRASFERITO LA HOME PAGE
-// 3)MANDARE AL SERVER LA RICHIESTA
+// Funzione per ottenere l'ID dell'album dalla query string
+function getAlbumIdFromQueryString() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  return urlParams.has("albumId") ? urlParams.get("albumId") : null;
+}
 
-// indichiamo di leggere la url corrente
-let currentUrl = window.location.search;
+// FETCH
+// ☑️Funzione per ottenere il contenuto di un album:
+// la funzione fetchAlbum prende come argomento albumId, che è l'ID dell'album da recuperare, quindi costruisce un URL utilizzando
+// questo ID e fa una richiesta GET a quell'URL. Se la richiesta ha successo, il contenuto dell'album viene restituito come oggetto JSON
 
-// Creare un oggetto URLSearchParams per ottenere i parametri dall'URL corrente
-let urlParams = new URLSearchParams(currentUrl);
-
-// Ottenere il valore del parametro albumId
-let albumId = urlParams.get("albumId");
-
-// // FARE FETCH
-
-fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + albumId)
-  .then((response) => {
-    if (response.ok) {
-      return response.json();
-    } else {
-      throw new Error("ERRORE NEL REPERIMENTO DATI");
+async function fetchAlbum(albumId) {
+  try {
+    const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`);
+    if (!response.ok) {
+      throw new Error("Errore durante il recupero dell'album");
     }
-  })
-  .then((albumData) => {
-    // Ottieni il contenitore dove inserire i dettagli dell'album
-    let albumContainer = document.getElementById("albumContainer");
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
 
-    // Creazione degli elementi HTML per visualizzare i dettagli dell'album
-    // Viene creato un nuovo elemento HTML di tipo <h2> (un titolo di secondo livello) e assegnato alla variabile albumTitle.
-    let albumTitle = document.createElement("h2");
-    // Il contenuto testuale dell'elemento <h2> appena creato viene impostato con il titolo dell'album, ottenuto dall'oggetto albumData
-    albumTitle.textContent = albumData.title;
+// FETCH
+// Funzione per ottenere e visualizzare i dettagli dell'album
+async function displayAlbumDetails() {
+  try {
+    const albumId = getAlbumIdFromQueryString();
+    if (albumId) {
+      const album = await fetchAlbum(albumId);
 
-    // Viene creato un nuovo elemento HTML di tipo <p> (un paragrafo) e assegnato alla variabile artistName.
-    let artistName = document.createElement("p");
-    // Il contenuto testuale dell'elemento <p> appena creato viene impostato con il nome dell'artista dell'album, presumibilmente ottenuto dall'oggetto albumData
-    artistName.textContent = albumData.artist.name;
+      //☑️PER FARE IN MODO CHE IL CONTENUTO DELL'ALBUM PAGE SI RIEMPIA DELLE CANZONI DELL'ALBUM
+      // 1)abbiamo messo un id per ogni elemento (es:id=copertina per la copertina) -
+      // 2)prendiamo l'id esempio copertina
+      // 3)poi inseriamo copertina.src(l'attributo)= album.cover(ossia dove vogliamo prendere e cosa vogliamo prendere)
+      if (album) {
+        let copertina = document.getElementById("copertina");
+        copertina.src = album.cover_big;
+        let titolo = document.getElementById("titolo");
+        titolo.innerText = album.title;
+        let nomeArtista = document.getElementById("nomeArtista");
+        nomeArtista.innerText = album.artist.name;
 
-    // Viene creato un nuovo elemento HTML di tipo <img> (un'immagine) e assegnato alla variabile albumCover.
-    let albumCover = document.createElement("img");
-    // L'attributo src dell'elemento <img> appena creato viene impostato con l'URL dell'immagine della copertina dell'album, ottenuto dall'oggetto albumData
-    albumCover.src = albumData.cover;
+        console.log(album);
+        const albumTable = document.getElementById("albumTable");
 
-    // Viene creato un nuovo elemento HTML di tipo <ul> (una lista non ordinata) e assegnato alla variabile trackList
-    let trackList = document.createElement("ul");
-    albumData.tracks.data.forEach((track) => {
-      // Viene creato un nuovo elemento HTML di tipo <li> (un elemento di lista) e assegnato alla variabile trackItem.
-      let trackItem = document.createElement("li");
-      // Il contenuto testuale dell'elemento <li> appena creato viene impostato con il titolo della traccia corrente.
-      trackItem.textContent = track.title;
-      // L'elemento <li> contenente il titolo della traccia viene aggiunto come figlio dell'elemento <ul> trackList.
-      trackList.appendChild(trackItem);
-    });
+        let stringaFinale = `
+        <table>
+        <tbody>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Album</th>
+            <th>Date Added</th>
+            <th>
+              <img src='./assets/Icone/Duration.svg' />
+            </th>
+          </tr>`;
+        for (let i = 0; i < album.tracks.data.length; i++) {
+          let testo = `
+          <tr>
+          <td>${i + 1}</td>
+          <td class="song-title">
+            <div class="song-image">
+              <img src="${album.cover_big}" alt="" />
+            </div>
+            <div class="song-name-album">
+              <div class="song-name">${album.tracks.data[i].title}</div>
+              <div class="song-artist">${album.artist.name}</div>
+            </div>
+          </td>
+          <td class="song-album">${album.title}</td>
+          <td class="song-date-added">${album.release_date}</td>
+          <td class="song-duration">${album.tracks.data[i].duration}</td>
+          </tr>
+          `;
+          stringaFinale += testo;
+        }
+        stringaFinale += ` </tbody>
+        </table>`;
+        albumTable.innerHTML = stringaFinale;
+      } else {
+        console.error("Album non trovato");
+      }
+    } else {
+      console.error("ID dell'album non fornito nella query string");
+    }
+  } catch (error) {
+    console.error("Errore durante il recupero dei dettagli dell'album:", error);
+  }
+}
 
-    // Aggiunta degli elementi creati al contenitore
-    albumContainer.appendChild(albumTitle);
-    albumContainer.appendChild(artistName);
-    albumContainer.appendChild(albumCover);
-    albumContainer.appendChild(trackList);
-  })
-  .catch((error) => {
-    console.error("Errore durante il recupero dei dati dell'album:", error);
-  });
-// -----
+window.onload = function () {
+  // Chiamata alla funzione per ottenere e visualizzare i dettagli dell'album
+  displayAlbumDetails();
+};
 
-// B)PASSAGGIO SECONDO -ABBIAMO FATTO UNA FETCH DI TIPO GET PER PRENDERE I DATI DEGLI ID ALBUM
-
-//  POI ABBIAMO CREATO elementi HTML per visualizzare il titolo dell'album, il nome dell'artista,
-//  la copertina dell'album e una lista delle tracce dell'album, utilizzando i dati forniti nell'oggetto albumData.
+//----------------------------------------------------------------------------------------------------------------
