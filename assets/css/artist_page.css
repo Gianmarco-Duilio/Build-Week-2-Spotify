@@ -3,7 +3,10 @@
   height: 100%;
   overflow: hidden;
 }
-
+.spzt {
+  margin: 0;
+  padding: 0px;
+}
 .box-container-img img {
   width: 100%;
   height: 100%;
@@ -12,27 +15,31 @@
 .btn-success {
   height: 40px;
 }
-/* STILE FOTO QUADRATE SOTTO LA SCRITTA POPOLARI */
-.custom-img {
-  width: 50px; /* Imposta la larghezza desiderata */
-  height: auto; /* Mantieni l'aspetto originale */
-  margin-bottom: 10px; /* Aggiunge spazio tra le immagini */
-  margin-right: 10px; /* Aggiunge spazio tra le immagini e i titoli */
+.n {
+  padding-inline: 17px;
+  color: #a7a7a7;
+  padding-bottom: 10px;
 }
-
+.custom-img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
 .title {
-  color: white; /* Colore del testo bianco */
-  margin-bottom: 5px; /* Aggiunge spazio tra i titoli e i sottotitoli */
+  color: white;
+  margin-bottom: 5px;
 }
 
 .artist {
-  padding-left: 215px;
+  padding-left: 120px;
   color: #969696;
+  cursor: pointer;
 }
 
 .sidebar {
-  overflow-y: auto; /* Imposta lo scorrimento verticale automatico */
-  max-height: calc(100vh - 56px); /* Imposta l'altezza massima in base all'altezza del viewport */
+  overflow-y: auto;
+  max-height: calc(100vh - 56px);
 }
 .sp:hover {
   color: white !important;
@@ -55,42 +62,50 @@
   width: 90px;
   height: 90px;
 }
-#trenta{
-  position: absolute;
-  left: 1350px;
-  top:550px;
-  width: 20px;
-  height: 20px;
-}
-.like {
-  position: relative;
-  top: 15px;
-  left: 10px;
+
+.iddd {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
 }
 
-.n {
-  color: #a4a4a4;
-  padding: 15px 15px 18px 15px;
+#blc {
+  padding-block: 3px;
 }
 #blc:hover {
-  background-color: black;
+  background-color: #343232;
+  color: white;
 }
-#blc:hover .n::before {
-  content: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"/></svg>');
-  width: 24px;
-  height: 24px;
+.title:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
-#blc:hover .n {
-  visibility: hidden;
+#blc:hover .artist {
+  color: white;
 }
-#blc .n::before {
-  content: "";
-}
+
 #visual {
   padding-left: 15px;
 }
 #blc:hover svg {
   visibility: visible;
+  cursor: pointer;
+}
+#blc svg {
+  visibility: hidden;
+  position: relative;
+  bottom: 2px;
+  left: 90px;
+}
+#blc a {
+  visibility: hidden;
+  position: relative;
+  bottom: 8px;
+  right: 4px;
+}
+#blc:hover a {
+  visibility: visible;
+  cursor: pointer;
 }
 .striscia {
   display: flex;
@@ -118,8 +133,8 @@
 }
 
 .icon {
-  position:relative;
-  right:100px;
+  position: relative;
+  right: 100px;
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -129,7 +144,7 @@
 .icon-item {
   background-color: #292929;
   border-radius: 50%;
-  padding-inline: 15px;
+  padding-inline: 7px;
   cursor: pointer;
 }
 .icon-item:hover {
@@ -167,9 +182,8 @@
 }
 footer {
   color: #fff;
-  padding-left: 480px;
-  padding-right: 150px;
-  padding-top: 50px;
+  padding-inline: 20px;
+  padding-top: 150px;
 }
 
 .container {
