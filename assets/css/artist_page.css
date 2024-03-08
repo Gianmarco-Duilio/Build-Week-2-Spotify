@@ -3,6 +3,17 @@
   height: 100%;
   overflow: hidden;
 }
+.box-container-img {
+  width: 100%; /* Modifica la larghezza a tuo piacimento */
+  height: 500px; /* Altezza fissa per l'immagine ritagliata in orizzontale */
+  background-size: cover; /* Copre l'intera area specificata */
+  background-position: center; /* Posiziona l'immagine al centro */
+  overflow: hidden; /* Nasconde le parti che eccedono l'area specificata */
+}
+#avatar {
+  width: 30px;
+  height: 30px;
+}
 .custom-img {
   width: 15px;
   height: 15px;
@@ -62,9 +73,7 @@
   color: white;
   font-size: 90px;
 }
-.clr {
-  background-color: #1b1b1b;
-}
+
 .circle {
   border-radius: 50%;
   width: 90px;

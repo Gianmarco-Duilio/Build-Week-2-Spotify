@@ -28,7 +28,10 @@ fetch(`https://deezerdevs-deezer.p.rapidapi.com/artist/${artistId}`, {
     let numFan = document.getElementById("numFan");
     numFan.innerText = data.nb_fan;
     let immagineArtista = document.getElementById("immagineArtista");
-    immagineArtista.src = data.picture_big;
+    immagineArtista.style.backgroundImage = `url('${data.picture_big}')`;
+    immagineArtista.style.backgroundSize = "cover";
+    immagineArtista.style.backgroundPosition = "top";
+    immagineArtista.style.overflow = "hidden";
   })
   .catch((error) => {
     console.error("Si è verificato un errore", error);

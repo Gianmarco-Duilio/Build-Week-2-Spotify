@@ -150,7 +150,7 @@ async function generateAlbumCardsWithBootstrapAndListeners() {
       if (album) {
         const html = `
                  
-                  <div class="col-12 col-md-4 col-xl-2 g-2">
+                  <div class="col-12 col-md-4 col-xl-2 g-3">
                       <div class="card text-white bg-dark bg-gradient p-2 fixed-size-card" data-album-id="${albumId}">
                           <img src="${album.cover_medium}" class="card-img-top rounded-2 album" alt="${album.title}">
                           <div class="card-body">
