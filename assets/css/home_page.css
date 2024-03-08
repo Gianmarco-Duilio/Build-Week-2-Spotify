@@ -90,7 +90,7 @@ a {
 
 .scrollbar {
   overflow-y: auto; /* Imposta lo scorrimento verticale automatico */
-  max-height: calc(120vh - 56px); /* Imposta l'altezza massima in base all'altezza del viewport */
+  max-height: calc(108vh - 56px); /* Imposta l'altezza massima in base all'altezza del viewport */
 }
 #scroll::-webkit-scrollbar-track {
   background-color: #000000;
