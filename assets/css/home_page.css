@@ -139,3 +139,13 @@ a {
 #topCard {
   background-color: #1b1b1b;
 }
+
+/* FOOTER */
+.footer-social-icons li {
+  margin-right: 15px; /* Aggiunge spazio tra le icone social */
+}
+
+#jumbotron {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(8deg, rgba(0, 0, 0, 0.938813025210084) 49%, rgba(0, 0, 0, 0) 83%);
+}
