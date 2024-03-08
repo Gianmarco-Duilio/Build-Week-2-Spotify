@@ -1,3 +1,4 @@
+//☑️LE TUE RIPRODUZIONI - BUONASERA
 const artistNames = ["Eminem", "Nelly", "Ice Cube", "Migos", "Snoop Dogg", "Lil Wayne"];
 
 function fetchArtistData(artistName) {
@@ -35,7 +36,7 @@ function createArtistCard(artist) {
       <div id="topCard" class="d-flex rounded-2 bg-dark.bg-gradient">
           <div><img src="${artist.picture_medium}" class="rounded-start"  id="imgTopCard"/></div>
           <div class="blc text-white">
-              <p class="truncate-2-lines">${artist.name}</p>
+              <p class="truncate-2-lines my-auto text-white ms-2">${artist.name}</p>
           </div>
       </div>
   `;
@@ -43,82 +44,107 @@ function createArtistCard(artist) {
   return card;
 }
 
-Promise.all(artistNames.map(fetchArtistData)).then((artistsData) => {
-  console.log(artistsData);
-  artistsData.forEach((artist) => {
-    const card = createArtistCard(artist);
-    container.appendChild(card);
-  });
-});
+// -----
+//☑️CARD ALBUM
+// Array degli ID degli album
+const albumIds = [
+  "544893852",
+  "9410086",
+  "12047952",
+  "87722792",
+  "397544257",
+  "384842207",
 
-// Funzione per creare una singola card di un album
-function createAlbumCard(albumId, albumName, artistName, albumImageSrc) {
-  const colDiv = document.createElement("div");
-  colDiv.classList.add("col-12", "col-md-4", "col-xl-2");
+  "74434962",
+  "108447472",
+  "544674272",
+  "445968695",
+  "544890462",
+  "182811182",
+];
 
-  const cardDiv = document.createElement("div");
-  cardDiv.classList.add("card", "text-white", "bg-dark", "bg-gradient", "p-2", "border-black");
-
-  const img = document.createElement("img");
-  img.src = albumImageSrc;
-  img.classList.add("card-img-top", "rounded-2", "album");
-  img.alt = "Album Cover";
-
-  const cardBodyDiv = document.createElement("div");
-  cardBodyDiv.classList.add("card-body");
-
-  const title = document.createElement("h5");
-  title.classList.add("card-title");
-  title.textContent = albumName;
-
-  const text = document.createElement("p");
-  text.classList.add("card-text");
-  text.textContent = artistName;
-
-  cardBodyDiv.appendChild(title);
-  cardBodyDiv.appendChild(text);
-
-  cardDiv.appendChild(img);
-  cardDiv.appendChild(cardBodyDiv);
-
-  colDiv.appendChild(cardDiv);
-
-  return colDiv;
+// Funzione per ottenere il contenuto di un album
+async function fetchAlbum_fromHome(albumId) {
+  try {
+    const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`);
+    if (!response.ok) {
+      throw new Error("Errore durante il recupero dell'album");
+    }
+    return await response.json();
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
 }
 
-function fetchAlbumData(albumId) {
-  return fetch(`https://deezerdevs-deezer.p.rapidapi.com/album/${albumId}`, {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": "9d6bfcc177msh2d11ca23a04202ep104be7jsn9e7420c2619b",
-      "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-    },
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Errore durante il recupero dei dati dell'album");
+// Funzione per generare le card degli album utilizzando Bootstrap e aggiungere gli event listener
+
+async function generateAlbumCardsWithBootstrapAndListeners() {
+  try {
+    const container = document.getElementById("raccoglitore");
+    let htmlInniettato = "";
+
+    for (let i = 0; i < albumIds.length; i++) {
+      const albumId = albumIds[i];
+      const album = await fetchAlbum_fromHome(albumId);
+      console.log(album);
+      if (album) {
+        const html = `
+                 
+                  <div class="col-12 col-md-4 col-xl-2">
+                      <div class="card text-white bg-secondary p-2 fixed-size-card" data-album-id="${albumId}">
+                          <img src="${album.cover}" class="card-img-top rounded-2 album" alt="${album.title}">
+                          <div class="card-body">
+                              <h5 class="card-title">${album.title}</h5>
+                              <p class="card-text">${album.artist.name}</p>
+                          </div>
+                      </div>
+                  </div>
+              `;
+        htmlInniettato += html;
+
+        // Aggiungi uno spazio ogni sei card
+        if ((i + 1) % 6 === 0 && i !== albumIds.length - 1) {
+          htmlInniettato += `<div class="spacer"></div>`;
+        }
       }
-      return response.json();
-    })
-    .then((data) => {
-      console.log(data);
-      const albumName = data.title;
-      const artistName = data.artist.name;
-      const albumImageSrc = data.cover_medium;
+    }
 
-      return createAlbumCard(albumId, albumName, artistName, albumImageSrc);
-    })
-    .catch((error) => {
-      console.error("Si è verificato un errore ", error);
+    container.innerHTML = htmlInniettato;
+
+    // Aggiungi gli event listener alle card generate dinamicamente
+    const cards = container.querySelectorAll(".card");
+    cards.forEach((card) => {
+      card.addEventListener("click", function () {
+        const albumId = card.getAttribute("data-album-id");
+        window.location.href = `album_page.html?albumId=${albumId}`;
+      });
     });
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-const row = document.querySelector("#middleCard");
-const albumIds = ["223761", "82006", "13606387", "402935287", "13936170", "6954983"];
-const albumPromises = albumIds.map(fetchAlbumData);
-
-Promise.all(albumPromises).then((cards) => {
-  cards.forEach((card) => {
-    row.appendChild(card);
+window.onload = function () {
+  Promise.all(artistNames.map(fetchArtistData)).then((artistsData) => {
+    console.log(artistsData);
+    artistsData.forEach((artist) => {
+      const card = createCard(artist);
+      container.appendChild(card);
+    });
   });
-});
+
+  // Chiamata alla funzione per generare le card degli album utilizzando Bootstrap e aggiungere gli event listener
+  generateAlbumCardsWithBootstrapAndListeners();
+};
+
+// -----
+
+// ☑️HOME PAGE
+
+// 1) ABBIAMO CREATO DINAMICAMENTE LE CARD DELLA HOME PAGE NEL JAVASCRIPT (creando un array di artisti e di id specifici degli album), FATTO UNA FECTCH DI TIPO GET PER PRENDERE I DATI
+// , CREATO DINAMICAMENTE LE CARD E INNIETTATE NELL'HTML (così che nella home page si visualizzino le card degli artisti scelti)
+
+// ☑️ALBUM PAGE
+// 2) ABBIAMO SEMPRE FATTO UNA FETCH (funzione fetchAlbum,per ottenere il contenuto di un album) e un'altra FETCH (funzione displayAlbumDetails,per ottenere e visualizzare i dettagli
+//  dell'album)

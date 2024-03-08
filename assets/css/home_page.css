@@ -113,6 +113,22 @@ a {
 #imgTopCard {
   width: 70px;
 }
+
+/* DIMENSIONE CARD */
+.fixed-size-card {
+  width: 200px;
+  height: 300px;
+}
+
+/* spazio tra i bottoni */
+.btn-group + .btn-group {
+  margin-left: 10px;
+}
+
+.spacer {
+  margin-bottom: 20px; /* Aggiungi il margine desiderato tra le righe */
+}
+
 .card-title,
 .card-text {
   font-size: 100%;
