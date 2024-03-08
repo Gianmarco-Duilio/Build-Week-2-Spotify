@@ -37,7 +37,7 @@ async function displayAlbumDetails() {
       // 3)poi inseriamo copertina.src(l'attributo)= album.cover(ossia dove vogliamo prendere e cosa vogliamo prendere)
       if (album) {
         let copertina = document.getElementById("copertina");
-        copertina.src = album.cover;
+        copertina.src = album.cover_big;
         let titolo = document.getElementById("titolo");
         titolo.innerText = album.title;
         let nomeArtista = document.getElementById("nomeArtista");
@@ -64,7 +64,7 @@ async function displayAlbumDetails() {
           <td>${i + 1}</td>
           <td class="song-title">
             <div class="song-image">
-              <img src="${album.cover}" alt="" />
+              <img src="${album.cover_big}" alt="" />
             </div>
             <div class="song-name-album">
               <div class="song-name">${album.tracks.data[i].title}</div>
@@ -96,3 +96,5 @@ window.onload = function () {
   // Chiamata alla funzione per ottenere e visualizzare i dettagli dell'album
   displayAlbumDetails();
 };
+
+//----------------------------------------------------------------------------------------------------------------

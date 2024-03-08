@@ -95,7 +95,6 @@ body {
 .playlist-public {
   font-size: 12px;
   font-weight: 600;
-  font-family: "AvenirLTStd-Black";
 }
 
 .playlist-title {
@@ -103,7 +102,6 @@ body {
   font-weight: 1000;
 
   margin-top: 10px;
-  font-family: "AvenirLTStd-Black";
 }
 
 .playlist-description {
@@ -115,12 +113,11 @@ body {
 
 .playlist-stats img {
   position: relative;
-  top: 6px;
 }
 
 .playlist-stats span:first-of-type {
   font-weight: 1000;
-  font-family: "AvenirLTStd-Black";
+  margin: 10px;
 }
 
 .playlist-buttons-left,
@@ -145,7 +142,7 @@ body {
 }
 
 .playlist-songs-container {
-  height: 1000px;
+  height: 100%;
   padding: 20px;
   background: rgb(95, 95, 95);
   background: linear-gradient(180deg, rgba(95, 95, 95, 1) 0%, rgba(18, 18, 18, 1) 22%, rgba(18, 18, 18, 1) 100%);

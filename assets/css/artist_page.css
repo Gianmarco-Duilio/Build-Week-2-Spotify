@@ -30,7 +30,7 @@
   color: #969696;
 }
 
-.sidebar {
+.scrollbar {
   overflow-y: auto; /* Imposta lo scorrimento verticale automatico */
   max-height: calc(100vh - 56px); /* Imposta l'altezza massima in base all'altezza del viewport */
 }
@@ -55,10 +55,10 @@
   width: 90px;
   height: 90px;
 }
-#trenta{
+#trenta {
   position: absolute;
   left: 1350px;
-  top:550px;
+  top: 550px;
   width: 20px;
   height: 20px;
 }
@@ -118,8 +118,8 @@
 }
 
 .icon {
-  position:relative;
-  right:100px;
+  position: relative;
+  right: 100px;
   display: flex;
   justify-content: space-between;
   gap: 10px;
