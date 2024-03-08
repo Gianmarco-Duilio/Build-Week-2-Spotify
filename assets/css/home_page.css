@@ -151,7 +151,7 @@ a {
   flex-wrap: wrap;
 }
 
-.icon {
+.icon2 {
   position: relative;
   right: 100px;
   display: flex;
@@ -160,7 +160,7 @@ a {
   height: 30px;
   width: 70px;
 }
-.icon-item {
+.icon-item2 {
   background-color: #292929;
   border-radius: 50%;
   padding-inline: 7px;

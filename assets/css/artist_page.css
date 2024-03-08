@@ -154,7 +154,7 @@
   border-color: #1d1d1d;
 }
 
-.icon {
+.icon2 {
   position: relative;
   right: 100px;
   display: flex;
@@ -163,13 +163,13 @@
   height: 30px;
   width: 70px;
 }
-.icon-item {
+.icon-item2 {
   background-color: #292929;
   border-radius: 50%;
   padding-inline: 7px;
   cursor: pointer;
 }
-.icon-item:hover {
+.icon-item2:hover {
   background-color: #787879;
 }
 .tt {
