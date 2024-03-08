@@ -2,6 +2,16 @@
   --spotify-green: #1db954;
   --footer-height: 40px;
 }
+@media screen and (min-width: 601px) {
+  div.playlist-title {
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  div.playlist-title {
+    font-size: 30px;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -142,7 +152,6 @@ body {
 }
 
 .playlist-songs-container {
-  height: 100%;
   padding: 20px;
   background: rgb(95, 95, 95);
   background: linear-gradient(180deg, rgba(95, 95, 95, 1) 0%, rgba(18, 18, 18, 1) 22%, rgba(18, 18, 18, 1) 100%);
