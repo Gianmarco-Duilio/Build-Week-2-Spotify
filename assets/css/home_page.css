@@ -69,3 +69,12 @@ a {
 .spacer {
   margin-bottom: 20px; /* Aggiungi il margine desiderato tra le righe */
 }
+
+.card-title,
+.card-text {
+  font-size: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

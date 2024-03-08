@@ -1,4 +1,4 @@
-// BUONASERA
+//☑️LE TUE RIPRODUZIONI - BUONASERA
 const artistNames = ["Eminem", "Nelly", "Ice Cube", "Migos", "Snoop Dogg", "Lil Wayne"];
 function fetchArtistData(artistName) {
   return fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${artistName}`, {
@@ -41,16 +41,9 @@ function createCard(artist) {
 
   return card;
 }
-Promise.all(artistNames.map(fetchArtistData)).then((artistsData) => {
-  console.log(artistsData);
-  artistsData.forEach((artist) => {
-    const card = createCard(artist);
-    container.appendChild(card);
-  });
-});
 
 // -----
-// CARD ALBUM
+//☑️CARD ALBUM
 // Array degli ID degli album
 const albumIds = [
   "544893852",
@@ -68,9 +61,8 @@ const albumIds = [
   "182811182",
 ];
 
-// FETCH
 // Funzione per ottenere il contenuto di un album
-async function fetchAlbum(albumId) {
+async function fetchAlbum_fromHome(albumId) {
   try {
     const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`);
     if (!response.ok) {
@@ -92,7 +84,8 @@ async function generateAlbumCardsWithBootstrapAndListeners() {
 
     for (let i = 0; i < albumIds.length; i++) {
       const albumId = albumIds[i];
-      const album = await fetchAlbum(albumId);
+      const album = await fetchAlbum_fromHome(albumId);
+      console.log(album);
       if (album) {
         const html = `
                  
@@ -130,7 +123,26 @@ async function generateAlbumCardsWithBootstrapAndListeners() {
   }
 }
 
-// Chiamata alla funzione per generare le card degli album utilizzando Bootstrap e aggiungere gli event listener
-generateAlbumCardsWithBootstrapAndListeners();
+window.onload = function () {
+  Promise.all(artistNames.map(fetchArtistData)).then((artistsData) => {
+    console.log(artistsData);
+    artistsData.forEach((artist) => {
+      const card = createCard(artist);
+      container.appendChild(card);
+    });
+  });
+
+  // Chiamata alla funzione per generare le card degli album utilizzando Bootstrap e aggiungere gli event listener
+  generateAlbumCardsWithBootstrapAndListeners();
+};
 
 // -----
+
+// ☑️HOME PAGE
+
+// 1) ABBIAMO CREATO DINAMICAMENTE LE CARD DELLA HOME PAGE NEL JAVASCRIPT (creando un array di artisti e di id specifici degli album), FATTO UNA FECTCH DI TIPO GET PER PRENDERE I DATI
+// , CREATO DINAMICAMENTE LE CARD E INNIETTATE NELL'HTML (così che nella home page si visualizzino le card degli artisti scelti)
+
+// ☑️ALBUM PAGE
+// 2) ABBIAMO SEMPRE FATTO UNA FETCH (funzione fetchAlbum,per ottenere il contenuto di un album) e un'altra FETCH (funzione displayAlbumDetails,per ottenere e visualizzare i dettagli
+//  dell'album)
