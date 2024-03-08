@@ -23,10 +23,12 @@ fetch(`https://deezerdevs-deezer.p.rapidapi.com/artist/${artistId}`, {
   })
   .then((data) => {
     console.log("Dati dell'artista:", data);
-    const artistName = data.name;
-    const artistDetailsContainer = document.getElementById("artistDetails");
-    console.log(artistDetailsContainer);
-    artistDetailsContainer.innerHTML = `<p>Nome Artista: ${artistName}</p>`;
+    let artistName = document.getElementById("artistName");
+    artistName.innerText = data.name;
+    let numFan = document.getElementById("numFan");
+    numFan.innerText = data.nb_fan;
+    let immagineArtista = document.getElementById("immagineArtista");
+    immagineArtista.src = data.picture_big;
   })
   .catch((error) => {
     console.error("Si è verificato un errore", error);
