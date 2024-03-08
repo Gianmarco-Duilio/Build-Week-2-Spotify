@@ -134,25 +134,9 @@
           <div class="container-fluid">
             <div class="row">
               <div>
-                <div class="playlist-top">
-                  <div class="playlist-arrows">
-                    <div class="arrow-container">
-                      <a href="/home_page.html" class="icon"><img src="./assets/Icone/LeftArrow.svg" alt="" /> </a>
-                    </div>
-                    <div class="arrow-container">
-                      <a href="#" class="icon"><img src="./assets/Icone/RightArrow.svg" alt="" /></a>
-                    </div>
-                  </div>
-                  <div class="playlist-top-email">
-                    <div class="arrow-container">
-                      <img src="./assets/account/man.png" alt="" />
-                    </div>
-                    <span>account</span>
-                  </div>
-                </div>
                 <div class="card text-bg-dark border-0 d-flex">
                   <div class="box-container-img">
-                    <img src="./assets/imgs/main/foto-album.jpg" class="card-img" alt="..." />
+                    <img src="./assets/imgs/main/foto-album.jpg" class="card-img" alt="..." id="immagineArtista"/>
                   </div>
                   <div class="card-img-overlay d-flex flex-column justify-content-end bg-transparent">
                     <div class="d-flex align-items-center mb-2">
@@ -174,8 +158,8 @@
                       </svg>
                       <h6 class="text-white mb-0">Artista verificato</h6>
                     </div>
-                    <h1 class="artname">YellowCard</h1>
-                    <p class="card-text text-white mb-0"><small>3.0000 ascoltatori</small></p>
+                    <h1 class="artname" id="artistName">YellowCard</h1>
+                    <p class="card-text text-white mb-0" id="numFan"><small>3.0000 ascoltatori</small></p>
                   </div>
                 </div>
               </div>
@@ -322,7 +306,7 @@
                       height="24"
                       style="visibility: hidden"
                     >
-                      <path
+                       <path
                         d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
                         fill="#FFFFFF"
                       ></path>
@@ -352,10 +336,11 @@
             </div>
           </div>
         </div>
-        <!-- -- -->
-      </div>
 
-        
+        <!-- PROVA -->
+        <div id="artistDetails"></div>
+
+      <!-- FOOTER -->
       <footer>
         
         <div class="d-flex justify-content-between">
@@ -414,10 +399,8 @@
       </div>
       </footer>
     
-    
-    <!-- FOOTER MOBILE -->
-
-    <!-- FOOTER -->
+    <!-- collegamento js -->
+    <script src="./artist_page.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
