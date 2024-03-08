@@ -42,6 +42,10 @@ async function displayAlbumDetails() {
         titolo.innerText = album.title;
         let nomeArtista = document.getElementById("nomeArtista");
         nomeArtista.innerText = album.artist.name;
+        let numeroCanzoni = document.getElementById("nSong");
+        numeroCanzoni.innerText = album.nb_tracks + " tracks";
+        let durata = document.getElementById("time");
+        durata.innerText = album.duration + "s";
 
         console.log(album);
         const albumTable = document.getElementById("albumTable");
