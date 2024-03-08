@@ -335,3 +335,17 @@ ul li a:hover {
 .playlists ul li a span {
   left: 80px;
 }
+
+/* CSS per ridurre le dimensioni dell'immagine e nascondere la parte superiore */
+.box-container-img {
+  width: 100%; /* Modifica la larghezza a tuo piacimento */
+  height: 500px; /* Altezza fissa per l'immagine ritagliata in orizzontale */
+  background-size: cover; /* Copre l'intera area specificata */
+  background-position: center; /* Posiziona l'immagine al centro */
+  overflow: hidden; /* Nasconde le parti che eccedono l'area specificata */
+}
+
+/* FOOTER */
+.footer-social-icons li {
+  margin-right: 15px; /* Aggiunge spazio tra le icone social */
+}
